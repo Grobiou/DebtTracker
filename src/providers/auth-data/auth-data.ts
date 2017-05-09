@@ -44,5 +44,6 @@ export class AuthDataProvider {
         return this.afAuth.auth.sendPasswordResetEmail(email);
     }
 
+    logoutUser(): firebase.Promise<void> { return this.afAuth.auth.signOut(); }
 
 }
