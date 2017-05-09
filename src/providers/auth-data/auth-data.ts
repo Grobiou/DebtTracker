@@ -40,6 +40,9 @@ export class AuthDataProvider {
         });
     }
 
+    resetPassword(email: string): firebase.Promise<any> {
+        return this.afAuth.auth.sendPasswordResetEmail(email);
+    }
 
 
 }
